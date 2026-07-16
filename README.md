@@ -1,7 +1,7 @@
-# Classifying Women's Economic Narratives: A Small-Scale, Explainable NLP Prototype
+Classifying Women's Economic Narratives: A Small-Scale, Explainable NLP Prototype
 
-**Submitted by: Samson Odhiambo (Wuod Abudo)
-**For:** FemDigiNomics — NLP and AI Intern application
+Submitted by: Samson Odhiambo
+For: FemDigiNomics — NLP and AI Intern application
 Files in this sample: `annotated_narratives.csv` (data), `classify_narratives.py` (code), `run_output.txt` (a real run of the pipeline against this data), this document (methodology and discussion)
 
 ---
