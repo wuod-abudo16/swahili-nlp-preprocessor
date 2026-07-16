@@ -1,0 +1,50 @@
+
+--- BIAS / CLASS-BALANCE CHECK -------------------------------
+  savings                7 / 25  (28%)
+  debt                   7 / 25  (28%)
+  chama_obligations      5 / 25  (20%)
+  business_risk         10 / 25  (40%)
+  care_work              6 / 25  (24%)
+  health_shocks          4 / 25  (16%)
+  lending_readiness      6 / 25  (24%)
+  NOTE: categories under ~15% of narratives should be treated as
+  provisional until more annotated data is collected — small-n
+  categories risk the model learning spurious keyword shortcuts.
+
+--- HELD-OUT EVALUATION (small-n, indicative only) -----------
+                   precision    recall  f1-score   support
+
+          savings       0.00      0.00      0.00         2
+             debt       0.00      0.00      0.00         3
+chama_obligations       0.00      0.00      0.00         2
+    business_risk       0.00      0.00      0.00         4
+        care_work       0.00      0.00      0.00         2
+    health_shocks       0.00      0.00      0.00         0
+lending_readiness       0.00      0.00      0.00         2
+
+        micro avg       0.00      0.00      0.00        15
+        macro avg       0.00      0.00      0.00        15
+     weighted avg       0.00      0.00      0.00        15
+      samples avg       0.00      0.00      0.00        15
+
+
+--- EXPLAINABILITY: TOP TERMS PER LABEL ----------------------
+  savings              -> wiki, kidogo, akiba, kuna, kila, kwa
+  debt                 -> deni, kuliko, sasa deni, walisema sina, walisema, wa soko
+  chama_obligations    -> cha, chama, changu cha, changu, chetu kimenisaidia, chetu
+  business_risk        -> biashara, wa, wa benki, kimenisaidia, kuanzisha kibanda, kuanzisha
+  care_work            -> shule kwa, mama yangu, my, na, mama, mara
+  health_shocks        -> shule kwa, mama yangu, mama, mara, yangu, kwa
+  lending_readiness    -> mkopo, benki, wa, mkopo wa, wa benki, dhamana
+
+--- SAMPLE PREDICTIONS ON HELD-OUT NARRATIVES ----------------
+  [N009] pred=['none'] true=['care_work', 'business_risk']
+  [N017] pred=['none'] true=['lending_readiness', 'debt']
+  [N001] pred=['none'] true=['savings', 'business_risk']
+  [N024] pred=['none'] true=['care_work', 'debt']
+  [N012] pred=['none'] true=['business_risk']
+  [N010] pred=['none'] true=['chama_obligations', 'savings']
+  [N014] pred=['none'] true=['lending_readiness', 'business_risk']
+  [N002] pred=['none'] true=['chama_obligations', 'debt']
+
+Done. See README.md for methodology and responsible-AI discussion.
